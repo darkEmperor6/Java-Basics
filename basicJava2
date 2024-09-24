@@ -40,4 +40,7 @@ public class Car {
         car1.printDetails();
 	 }
 
+/*If the parameter name in a method or constructor is the same as the instance variable name, it creates confusion about which variable you are referring to. Using this makes it clear that you are referring 
+*to the instance variable.
+*/
 }
