@@ -1,0 +1,44 @@
+package array3;
+import java.util.Arrays;
+
+public class Array3 {
+
+    public static void main(String[] args) {
+        int[] num = new int[3];
+        int[] values = {1, 5, 2};
+        num[0] = 5;
+        num[1] = 2;
+        num[2] = 1;
+
+        // Print the elements of num
+        System.out.print("Array elements of num: " + Arrays.toString(num) + "\n");
+
+        // Sort the num array
+        Arrays.sort(num);
+        System.out.println("Sorted array: " + Arrays.toString(num));
+
+        // Print the elements of values
+        System.out.println("Array elements of values: " + Arrays.toString(values));
+
+        // Compare unsorted num and values
+        boolean areEqual = Arrays.equals(num, values);
+        System.out.println("Are both arrays equal: " + areEqual);
+
+        // Sort the values array
+        Arrays.sort(values);
+        System.out.println("Sorted elements of values: " + Arrays.toString(values));
+
+        // Compare sorted num and values
+        areEqual = Arrays.equals(num, values);
+        System.out.println("Are both arrays equal: " + areEqual);
+        
+        /*Array elements of num: [5, 2, 1]
+         *Sorted array: [1, 2, 5]
+         *Array elements of values: [1, 5, 2]
+         *Are both arrays equal: false
+         *Sorted elements of values: [1, 2, 5]
+         *Are both arrays equal: true
+         */
+    }
+    
+}
