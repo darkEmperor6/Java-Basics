@@ -1,0 +1,44 @@
+package automobile;
+import java.util.Scanner;//Import Scanner class to take inputs
+import java.text.DecimalFormat; // Import DecimalFormat for formatting numbers
+
+//Declaration of class Car
+public class Car {
+     //Declaration of fields/instance variables
+	 private String model;
+	 private double price;
+	  
+	 //Declaration of Constructor for the class to initialize the Car object
+	 public Car(String modelName, double carPrice) {
+		 model = modelName;
+		 price = carPrice;
+	 }
+	 
+	 // Method to print details of the car for sale
+	 public void printDetails() {
+		 DecimalFormat df = new DecimalFormat("#,###.00");
+		 System.out.println("Car Model: " + model);
+		 System.out.println("Sale price: " + df.format(price));
+	 }
+	
+	 //Declaration of static method
+	 public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);//Creating a Scanner object
+		
+		System.out.println("****Details of Car for sale****");
+        System.out.println("Enter Model: ");
+        String modelName = scanner.nextLine();//Reads a line
+        System.out.println("Enter Price: ");
+        double carPrice = scanner.nextDouble();//Reads double value
+        
+        // Close the scanner to prevent resource leaks
+        scanner.close();
+        
+        // Creating a Car object
+        Car car1 = new Car(modelName, carPrice);
+        
+        //Printing the details of the Car object
+        car1.printDetails();
+	 }
+
+}
