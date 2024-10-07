@@ -8,9 +8,12 @@ public class String1 {
 		System.out.println(msg);
 		/* Creates new object "Bye" and reference to it. As a result "Hello world" becomes 
 		 * unreachable object and available for garbage collection by JVM.
+		 * Since, String is an immutable object, we create new object when we try to reassign the
+		 * original string.
 		 */
 		msg = "Bye";
 		System.out.println(msg);
 	}
 
 }
+
