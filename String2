@@ -1,0 +1,24 @@
+package basics.string;
+
+public class Equality {
+
+	public static void main(String[] args) {
+		//String references: word1, word2, word3
+		//String objects: "Java", "Python"
+		String word1 = "Java";
+		String word2 = "Java";
+		//Just like other objects, we can use new to create String too
+		String word3 = new String("Python");
+		String word4 = "JAVA";
+		
+		// == op to check if two string references points to same object
+		System.out.println(word1 == word2); //true
+		System.out.println(word1 == word3); //false
+		// 'equals()' checks if the actual content of the strings is the same, case-sensitive
+		System.out.println(word1.equals(word4));  // false, "Java" is not equal to "JAVA" (case-sensitive)
+	    //'equalsIgnoreCase()' compares strings regardless of their case
+		System.out.println(word1.equalsIgnoreCase(word4)); // true, "Java" equals "JAVA" ignoring case
+		
+	}
+
+}
