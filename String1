@@ -1,0 +1,16 @@
+package string1;
+
+public class String1 {
+
+	public static void main(String[] args) {
+		//Creates new object "Hello World!" and points to it
+		String msg = "Hello World!"; 
+		System.out.println(msg);
+		/* Creates new object "Bye" and reference to it. As a result "Hello world" becomes 
+		 * unreachable object and available for garbage collection by JVM.
+		 */
+		msg = "Bye";
+		System.out.println(msg);
+	}
+
+}
