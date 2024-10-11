@@ -1,0 +1,40 @@
+package basics.algorithms;
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		//Unsorted array
+		int[] num = {5, 3, 9, 1, 10, 15, 2, 8};
+		
+		for (int i = 1; i < num.length; i++) {
+			int pointer = num[i]; //Setting the pointer to the current element
+		    int j = i - 1; //Index of the left adjacent term of the pointer to be compared
+		    
+		    //we swap the adjacent values only when the pointer value less than left adjacent value
+		    //if j < 0 Array out of bounds
+		   // We only shift if the current element (pointer) is smaller than the left adjacent element
+		    while (j >= 0 && num[j] > pointer) {
+		    	num[j+1] = num[j]; //left adjacent value would be shifted to right
+		    	j--; //decrement to compare with the inserted pointer in left side with its left adjacent value
+		    }
+		    
+		    /* while (num[j] > pointer && j >= 0): Array out of bounds
+		     * Loop will try to access the non-existant num[-1] and invokes the error
+		     */
+		    
+		 // Place the pointer (the current element being inserted) into its correct position
+		 // After the while loop, `j` will be at the index of the last element that was larger than the pointer
+		 // So, we need to insert the pointer at `j + 1`, which is the correct spot in the sorted portion of the array.
+		    
+		    num[j+1] = pointer; 
+        //num[j] = pointer;  This is wrong as j would be -1 at a certain point and -1 is out of bounds
+	    }
+		
+		System.out.print("Sorted Array: ");
+		
+		for (int i = 0; i < num.length; i++) {
+			System.out.print(num[i] + " ");
+		}
+	}
+
+}
