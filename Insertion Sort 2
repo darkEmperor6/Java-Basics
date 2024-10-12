@@ -1,0 +1,27 @@
+package basics.algorithms;
+import java.util.Arrays;
+
+public class InsertionSort2 {
+	
+	public static void insertionSort(int[] num) {
+		for(int i = 1; i < num.length; i++) {
+			int pointer = num[i];
+			int j = i - 1;
+			
+			while (j >= 0 && num[j] > pointer) {
+				num[j+1] = num[j];
+				j--;
+			}
+			
+			num[j+1] = pointer;
+		}
+	}
+	
+	public static void main(String[] arg) {
+		int[] num = {5, 3, 9, 1, 10, 15, 2, 8};
+		
+		insertionSort(num);
+		System.out.println("Sorted array: " + Arrays.toString(num));
+	}
+
+}
